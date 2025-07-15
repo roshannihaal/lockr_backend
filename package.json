@@ -1,26 +1,45 @@
 {
-  "name": "lockr_backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": " ts-node src/index.ts",
-    "start": "node dist/index.js",
-    "build": "rm -rf dist && tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roshannihaal/lockr_backend.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/roshannihaal/lockr_backend/issues"
-  },
-  "homepage": "https://github.com/roshannihaal/lockr_backend#readme",
-  "description": "",
-  "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  }
+    "name": "lockr_backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/index.ts",
+        "start": "node dist/index.js",
+        "build": "rm -rf dist && tsc",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/roshannihaal/lockr_backend.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/roshannihaal/lockr_backend/issues"
+    },
+    "homepage": "https://github.com/roshannihaal/lockr_backend#readme",
+    "description": "",
+    "devDependencies": {
+        "@eslint/js": "^9.31.0",
+        "@types/express": "^5.0.3",
+        "eslint": "^9.31.0",
+        "globals": "^16.3.0",
+        "husky": "^9.1.7",
+        "nodemon": "^3.1.10",
+        "prettier": "3.6.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.37.0"
+    },
+    "lint-staged": {
+        "**/*": [
+            "eslint --fix",
+            "prettier --write --ignore-unknown"
+        ]
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "zod": "^4.0.5"
+    }
 }

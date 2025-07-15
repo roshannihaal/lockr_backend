@@ -1,0 +1,39 @@
+# Node.js
+node_modules
+package-lock.json
+yarn.lock
+
+# Build output
+dist
+build
+*.log
+
+# Environment files
+.env
+.env.*  # for .env.development, .env.production, etc.
+
+# Docker-related
+Dockerfile
+.dockerignore
+
+# Prisma generated files
+prisma/migrations
+prisma/generated
+prisma/*.env
+prisma/dev.db
+
+# Coverage
+coverage
+
+# Git
+.git
+.gitignore
+
+# IDE / editor config
+.vscode
+.idea
+
+# Others
+*.snap       # Jest snapshots
+*.sqlite     # local dev DBs
+*.tsbuildinfo

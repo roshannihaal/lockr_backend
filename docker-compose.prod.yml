@@ -1,0 +1,15 @@
+services:
+    api:
+        networks:
+            - lockr-network
+        build:
+            target: production
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./:/usr/src/app
+        command: npm run dev
+
+networks:
+    lockr-network:
+        driver: bridge
